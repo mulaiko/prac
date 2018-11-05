@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-body">
+    <div class="h5"><%= user.name %></div>
+    <div class="h7"><%= user.bio %></div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <div class="h6 text-muted">Followers</div>
+      <div class="h5"><%= user.followers_count %></div>
+    </li>
+    <li class="list-group-item">
+      <div class="h6 text-muted">Following</div>
+      <div class="h5"><%= user.follow_count %></div>
+    </li>
+    <% if user_signed_in? %>    
+      <li class="list-group-item">        
+        <div id="follow_user">
+          <%= render "follow_user", user: user %>
+        </div>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to 'Sign up', new_user_registration_path %> OR
+      </li>      
+      <li>
+        <%= link_to 'Login', new_user_session_path %> to follow this user.
+      </li>      
+    <% end %>
+  </ul>
+</div>

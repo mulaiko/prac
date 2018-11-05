@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Borat Make A Twitter!</a>
+    </div>
+    <ul class="nav navbar-nav">    
+  	<% if user_signed_in? %>
+    	<li><%= current_user.email %></li>
+    	<li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+    	<li><%= link_to 'Logout', edit_user_registration_path, method: :delete %></li>
+  	<% else %>
+ 	  	<li><%= link_to 'Sign up', new_user_registration_path %></li>
+    	<li><%= link_to 'Login', new_user_session_path %></li>
+  	<% end %>
+		</ul>
+  </div>
+</nav>

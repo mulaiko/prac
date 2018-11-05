@@ -1,0 +1,11 @@
+<div class="card gedf-card">
+  <div class="card-header">
+    Say Something
+  </div>
+  <div class="card-body">
+    <%= simple_form_for @post do |f| %>
+      <%= f.input :content %>
+      <%= f.button :submit , id: "post_submit"%>
+    <% end %>
+  </div>
+</div>
