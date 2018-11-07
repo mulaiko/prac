@@ -13,10 +13,9 @@ App.post = App.cable.subscriptions.create("PostChannel", {
 });
 
 $( document).ready( function(){
-  $(".simple_form.new_post").submit(function (e) {
-      App.post.create_post($('#post_content').val());
-      $('#post_text').val("");
-      $("#post_submit").prop("disabled", false);
-      e.preventDefault();    
+  $(document).on('submit', '.simple_form.new_post', {}, function(e) {
+    App.post.create_post($('#post_content').val());      
+    $('#post_content').val("");
+    e.preventDefault();
   });
 });
