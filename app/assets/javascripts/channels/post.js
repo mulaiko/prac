@@ -12,7 +12,7 @@ App.post = App.cable.subscriptions.create("PostChannel", {
   }
 });
 
-$( document).ready( function(){
+$(document).on('turbolinks:load', function(){
   $(document).on('submit', '.simple_form.new_post', {}, function(e) {
     App.post.create_post($('#post_content').val());      
     $('#post_content').val("");
