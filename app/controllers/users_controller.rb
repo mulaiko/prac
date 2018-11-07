@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 	before_action :set_user, only: [:show]
 
   def show
-    @posts = PostDecorator.decorate_collection(@user.posts)
+    @posts = decorate_collection(@user.posts)
   end
 
   def follow_feed 
     @post = current_user.posts.build
-    @posts = PostDecorator.decorate_collection(current_user.following_posts)
+    @posts = decorate_collection(UserVisiblePostsQuery.call(current_user))
   end
 
   private
@@ -16,4 +16,8 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end 
+
+  def decorate_collection(collection)
+    PostDecorator.decorate_collection(collection)
+  end
 end
