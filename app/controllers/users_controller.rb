@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :authenticate_user!, only: [:follow_feed]
+	skip_before_action :authenticate_user!, only: [:index]
 	before_action :set_user, only: [:show]
 
   def index
