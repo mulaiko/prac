@@ -1,24 +1,12 @@
-# README
+Very-Basic-social-media-site™ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Features:
+- ActionCable to enable real time post updates if users are logged in at the same time.
 
-Things you may want to cover:
+Abstractions used/demonstrated 
+- Query Objects
+- Decorators
 
-* Ruby version
+Extra:
+- ActiveJob job used to demonstrate what would be a more scale way of doing things
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
