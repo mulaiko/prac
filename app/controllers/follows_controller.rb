@@ -3,6 +3,7 @@ class FollowsController < ApplicationController
 
 	 def create   
     current_user.follow(@user)
+    render partial: 'users/follow_user', locals: { user: @user}
   end
 
   def destroy
