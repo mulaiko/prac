@@ -3,7 +3,7 @@ class PostBroadcastJob < ApplicationJob
   
   def perform(user, post) 
     user.following_ids.each do |id|
-      ActionCable.server.broadcast "live_posts: #{id}", message: render(post.decorate)
+      ActionCable.server.broadcast "live_posts: #{id}", content: render(post.decorate)
     end
   end 
 
