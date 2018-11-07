@@ -10,5 +10,9 @@
         <%= render partial: 'posts/post', collection: @posts, as: :post %>
       </div>
     </div>
+    <div class="col-md-3">
+      <h4> Users to follow </h4>
+      <%= render  partial: 'users_listing', collection: @users, as: :user %>
+    </div>
   </div>
 </div>
