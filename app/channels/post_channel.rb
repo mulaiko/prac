@@ -9,6 +9,6 @@ class PostChannel < ApplicationCable::Channel
   end
 
   def create_post(data)
-    current_user.posts.create(content: data['message'])    
+    current_user.posts.create(content: data['content'])    
   end
 end
