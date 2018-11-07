@@ -2,12 +2,12 @@ App.post = App.cable.subscriptions.create("PostChannel", {
   connected: function() { console.log("connected to server");},
   disconnected: function() {},
   received: function(data) {
-    $("#posts").prepend(data["message"]);   
+    $("#posts").prepend(data["content"]);   
   },
-  create_post: function(message) {
+  create_post: function(content) {
     return this.perform('create_post', {
-      message: message,      
-    });
+      content: content,      
+    })
   }
 });
 
