@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	skip_before_action :authenticate_user!, only: [:index]
 	before_action :set_user, only: [:show]
+  before_action :set_users, only: [:index, :follow_feed]
 
   def index
   end
@@ -19,6 +20,10 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end 
+
+  def set_users
+    @users = User.all
+  end
 
   def decorate_collection(collection)
     PostDecorator.decorate_collection(collection)
