@@ -1,10 +1,10 @@
-<h3>Posts from yourself and others</h3>
 <div class="container-fluid gedf-wrapper">
   <div class="row">
     <div class="col-md-3">
       <%= render 'user_info_card', user: current_user %>
     </div>
     <div class="col-md-6 gedf-main">
+      <h4>Posts from yourself and others</h4>
       <%= render partial: 'posts/form' %>
       <div id="posts">
         <%= render partial: 'posts/post', collection: @posts, as: :post %>
