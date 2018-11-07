@@ -2,6 +2,9 @@ class UsersController < ApplicationController
 	before_action :authenticate_user!, only: [:follow_feed]
 	before_action :set_user, only: [:show]
 
+  def index
+  end
+
   def show
     @posts = decorate_collection(@user.posts)
   end
