@@ -1,5 +1,5 @@
 class PostBroadcastJob < ApplicationJob  
-  queue_as :default
+  queue_as :live_posts
   
   def perform(user, post) 
     user.following_ids.each do |id|
