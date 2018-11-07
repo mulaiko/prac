@@ -46,6 +46,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'faker'
   gem 'database_cleaner'
+  gem 'action-cable-testing'
 end
 
 group :development do
