@@ -23,7 +23,7 @@ gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 gem 'draper'
 gem 'devise'
 gem 'simple_form'
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
