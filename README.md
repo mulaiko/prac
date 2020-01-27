@@ -1,3 +1,5 @@
+Illustrate depth and breadth of Rails knowledge by building a basic social media site.
+
 Very-Basic-social-media-site™ 
 
 Features:
